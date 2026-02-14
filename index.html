@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
-    <title>💕 Secret Love Mission · Final</title>
+    <title>💕For my girl · Final</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(145deg, #ff758c, #ff7eb3, #fdc9bf);
@@ -17,25 +23,53 @@
             padding: 20px;
             transition: background 0.8s ease;
         }
+
         .screen {
             display: none;
             max-width: 600px;
             width: 100%;
-            background: rgba(255,255,255,0.22);
+            background: rgba(255, 255, 255, 0.22);
             backdrop-filter: blur(12px);
             border-radius: 48px 20px;
             padding: 30px 25px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
-        .active { display: block; animation: cardGlow 0.8s ease; }
+
+        .active {
+            display: block;
+            animation: cardGlow 0.8s ease;
+        }
+
         @keyframes cardGlow {
-            0% { opacity: 0.3; transform: scale(0.96); }
-            100% { opacity: 1; transform: scale(1); }
+            0% {
+                opacity: 0.3;
+                transform: scale(0.96);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
-        h1, h2 { font-weight: 600; text-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-        h1 { font-size: 2.2rem; margin-bottom: 15px; }
-        p { font-size: 1.2rem; margin: 20px 0; line-height: 1.5; }
+
+        h1,
+        h2 {
+            font-weight: 600;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
         button {
             padding: 14px 30px;
             font-size: 1.2rem;
@@ -46,16 +80,18 @@
             background: white;
             color: #ff4d6d;
             font-weight: 600;
-            box-shadow: 0 10px 20px rgba(255,70,100,0.3);
+            box-shadow: 0 10px 20px rgba(255, 70, 100, 0.3);
             transition: 0.2s;
             border: 2px solid transparent;
         }
+
         button:hover {
             background: #ffe3e6;
             transform: scale(1.07);
-            box-shadow: 0 18px 30px rgba(255,70,100,0.4);
+            box-shadow: 0 18px 30px rgba(255, 70, 100, 0.4);
             border: 2px solid white;
         }
+
         input {
             padding: 16px 22px;
             border-radius: 50px;
@@ -63,15 +99,19 @@
             width: 85%;
             max-width: 400px;
             font-size: 1.1rem;
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.9);
             margin: 15px 0;
             text-align: center;
             outline: none;
             border: 2px solid transparent;
         }
-        input:focus { border: 2px solid #ffb3c6; }
+
+        input:focus {
+            border: 2px solid #ffb3c6;
+        }
+
         .mission-badge {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
             padding: 6px 16px;
             border-radius: 100px;
             display: inline-block;
@@ -79,6 +119,7 @@
             margin-bottom: 15px;
             border: 1px solid white;
         }
+
         #hearts {
             display: flex;
             justify-content: center;
@@ -86,64 +127,106 @@
             margin: 30px 0;
             flex-wrap: wrap;
         }
+
         .heart {
             font-size: 52px;
             cursor: pointer;
-            filter: drop-shadow(0 8px 10px rgba(220,20,60,0.4));
+            filter: drop-shadow(0 8px 10px rgba(220, 20, 60, 0.4));
             animation: pulseHeart 2s infinite;
         }
-        .heart:hover { transform: scale(1.2); }
+
+        .heart:hover {
+            transform: scale(1.2);
+        }
+
         @keyframes pulseHeart {
-            0%,100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
         }
+
         @keyframes shake {
-            0%,100% { transform: translateX(0); }
-            20%,60% { transform: translateX(-8px); }
-            40%,80% { transform: translateX(8px); }
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            20%,
+            60% {
+                transform: translateX(-8px);
+            }
+
+            40%,
+            80% {
+                transform: translateX(8px);
+            }
         }
-        .shake { animation: shake 0.4s ease; }
+
+        .shake {
+            animation: shake 0.4s ease;
+        }
 
         /* No button – playful */
         #no {
             background: #fff0f3;
             color: #b23b4b;
             border: 2px solid #ffccd5;
-            box-shadow: 0 5px 15px rgba(255,100,100,0.3);
+            box-shadow: 0 5px 15px rgba(255, 100, 100, 0.3);
             transition: left 0.06s, top 0.06s, opacity 0.3s, transform 0.3s, background 0.3s;
             position: relative;
             will-change: left, top;
         }
+
         #yes {
             background: #ff3b5c;
             color: white;
             border: 2px solid white;
             animation: glow 2s infinite;
         }
+
         @keyframes glow {
-            0%,100% { box-shadow: 0 0 15px rgba(255,255,255,0.5); }
-            50% { box-shadow: 0 0 30px rgba(255,255,255,0.8); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+            }
         }
 
-        #letter, #couplePhoto, #memoryLane {
+        #letter,
+        #couplePhoto,
+        #memoryLane {
             display: none;
             opacity: 0;
             transition: opacity 0.8s ease;
         }
+
         #couplePhoto {
             width: 250px;
             max-width: 85%;
             border-radius: 30px;
-            border: 5px solid rgba(255,255,255,0.6);
+            border: 5px solid rgba(255, 255, 255, 0.6);
             margin: 15px auto;
         }
+
         #letter {
-            background: rgba(255,255,255,0.25);
+            background: rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(10px);
             border-radius: 40px 12px;
             padding: 25px;
             margin-top: 30px;
         }
+
         .floating {
             position: fixed;
             bottom: -20px;
@@ -152,9 +235,17 @@
             animation: floatUp 7s linear infinite;
             opacity: 0.8;
         }
+
         @keyframes floatUp {
-            0% { transform: translateY(0); opacity: 0.9; }
-            100% { transform: translateY(-900px); opacity: 0; }
+            0% {
+                transform: translateY(0);
+                opacity: 0.9;
+            }
+
+            100% {
+                transform: translateY(-900px);
+                opacity: 0;
+            }
         }
 
         /* Memory Lane – flicker‑free */
@@ -163,20 +254,23 @@
             width: 100%;
             will-change: opacity;
         }
+
         .memory-card {
             background: white;
             padding: 10px 10px 20px;
             border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
             max-width: 160px;
             transition: box-shadow 0.2s, transform 0.2s;
             transform: translateZ(0);
             backface-visibility: hidden;
         }
+
         .memory-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 18px 30px rgba(0,0,0,0.25);
+            box-shadow: 0 18px 30px rgba(0, 0, 0, 0.25);
         }
+
         .memory-card img {
             width: 100%;
             height: 130px;
@@ -187,6 +281,7 @@
             display: block;
             backface-visibility: hidden;
         }
+
         .memory-card p {
             color: #b23b4b;
             margin-top: 10px;
@@ -194,6 +289,7 @@
             font-size: 0.85rem;
             text-align: center;
         }
+
         .gallery-row {
             display: flex;
             flex-wrap: wrap;
@@ -208,13 +304,13 @@
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%) scale(0.9);
-            background: rgba(255,110,130,0.95);
+            background: rgba(255, 110, 130, 0.95);
             backdrop-filter: blur(10px);
             color: white;
             padding: 16px 30px;
             border-radius: 60px;
             font-weight: 600;
-            box-shadow: 0 15px 30px rgba(255,80,100,0.4);
+            box-shadow: 0 15px 30px rgba(255, 80, 100, 0.4);
             border: 2px solid white;
             z-index: 9999;
             opacity: 0;
@@ -226,424 +322,489 @@
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- Screens 1–10 (tasks) will be identical to previous versions, but for brevity we include the essential ones.
+    <!-- Screens 1–10 (tasks) will be identical to previous versions, but for brevity we include the essential ones.
      You can copy your existing screens 1–10 from your earlier file – they work perfectly.
      Here I'll show a minimal version focusing on the final screen and No button logic. 
      In a real full answer, I'd include all 10 screens, but to keep this response focused, I'll present the final corrected logic with the key parts. 
      Since the user asked to "start from the scratch" but with all features, I'll provide a compact yet complete file. -->
 
-<!-- SCREEN 1 (Welcome) -->
-<div id="screen1" class="screen active">
-    <span class="mission-badge">💌 Secret Mission</span>
-    <h1>✨ Poonakuttyyyyy! ✨</h1>
-    <p>8 romantic tasks await...</p>
-    <button onclick="nextScreen(2)">❤️ Start Mission</button>
-</div>
-
-<!-- SCREEN 2 (Name) -->
-<div id="screen2" class="screen">
-    <span class="mission-badge">🎯 Task 1/8</span>
-    <h2>💭 Enaku pudicha ponnu?</h2>
-    <input type="text" id="answer1" placeholder="Thiru karangalala type pannu...">
-    <button onclick="checkAnswer()">💘 Submit</button>
-    <div class="hint">💡 my jaanu</div>
-</div>
-
-<!-- SCREEN 3 (Hearts) -->
-<div id="screen3" class="screen">
-    <span class="mission-badge">🎯 Task 2/8</span>
-    <h2>❤️‍🔥 Click all 5 hearts</h2>
-    <div id="hearts"></div>
-    <p id="heartCounter">❤️ 0/5</p>
-</div>
-
-<!-- SCREEN 4 (Love is...) -->
-<div id="screen4" class="screen">
-    <span class="mission-badge">🎯 Task 3/8</span>
-    <h2>✨ Love is ______</h2>
-    <input type="text" id="answer2" placeholder="your answer">
-    <button onclick="finalCheck()">📮 Submit</button>
-</div>
-
-<!-- SCREEN 5 (Date) -->
-<div id="screen5" class="screen">
-    <span class="mission-badge">🎯 Task 4/8</span>
-    <h2>📅 When did we first meet?</h2>
-    <input type="text" id="answerDate" placeholder="DD/MM/YYYY">
-    <button onclick="checkDate()">💝 Submit</button>
-</div>
-
-<!-- SCREEN 6 (Love Meter) -->
-<div id="screen6" class="screen">
-    <span class="mission-badge">🎯 Task 5/8</span>
-    <h2>📊 How much do you love me?</h2>
-    <input type="range" id="loveMeter" min="0" max="100" value="50" style="width:80%;">
-    <p id="loveValue">50%</p>
-    <button onclick="checkLoveMeter()">💘 Lock It!</button>
-</div>
-
-<!-- SCREEN 7 (Emoji) -->
-<div id="screen7" class="screen">
-    <span class="mission-badge">🎯 Task 6/8</span>
-    <h2>🎮 Match the Emoji! 🍕🎬</h2>
-    <div style="display:flex; flex-direction:column; gap:15px; max-width:300px; margin:0 auto;">
-        <button onclick="checkEmoji('date')">Our first date</button>
-        <button onclick="checkEmoji('pizza')">Pizza night</button>
-        <button onclick="checkEmoji('movie')">Movie marathon</button>
-        <button onclick="checkEmoji('cafe')">Cafe hopping</button>
+    <!-- SCREEN 1 (Welcome) -->
+    <div id="screen1" class="screen active">
+        <span class="mission-badge">💌 Secret Mission</span>
+        <h1>✨ Poonakuttyyyyy! ✨</h1>
+        <p style="font-size:1.4rem;"> Chinnatha knjm task, panriya?</p>
+        <p style="margin-bottom:25px;">🌸 8 task seriya , ovonum ovoru mari👀 🌸</p>
+        <button onclick="nextScreen(2)">❤️ Start Mission</button>
     </div>
-</div>
 
-<!-- SCREEN 8 (Song) -->
-<div id="screen8" class="screen">
-    <span class="mission-badge">🎯 Task 7/8</span>
-    <h2>🎵 Our Song?</h2>
-    <p>"Darling, just hold my hand..."</p>
-    <input type="text" id="songAnswer" placeholder="Next line?">
-    <button onclick="checkSong()">🎤 Sing it!</button>
-</div>
+    <!-- SCREEN 2 (Name) -->
+    <div id="screen2" class="screen">
+        <span class="mission-badge">🎯 Task 1/8</span>
+        <h2 style="font-size:1.9rem;">💭 Enaku pudicha ponnu yaru?</h2>
+        <p style="font-weight:300;">( note: nee kidayathu , vera try pannu🙈 )</p>
+        <input type="text" id="answer1" placeholder="Thiru karangalala type pannu...😘">
+        <button onclick="checkAnswer()">💘 Submit</button>
+        <div class="hint">💡 ava per sonna kova paduva 👀</div>
+    </div>
 
-<!-- SCREEN 9 (Gift) -->
-<div id="screen9" class="screen">
-    <span class="mission-badge">🎯 Task 8/8</span>
-    <h2>🎁 Build Your Gift</h2>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px;">
-        <div onclick="selectGift('chocolate')" class="gift-item" style="background:rgba(255,255,255,0.3); padding:15px; border-radius:20px; width:120px; cursor:pointer; border:3px solid transparent;">
-            <div style="font-size:3rem;">🍫</div><p>Chocolates</p>
-        </div>
-        <div onclick="selectGift('flowers')" class="gift-item" style="background:rgba(255,255,255,0.3); padding:15px; border-radius:20px; width:120px; cursor:pointer; border:3px solid transparent;">
-            <div style="font-size:3rem;">🌹</div><p>Flowers</p>
-        </div>
-        <div onclick="selectGift('teddy')" class="gift-item" style="background:rgba(255,255,255,0.3); padding:15px; border-radius:20px; width:120px; cursor:pointer; border:3px solid transparent;">
-            <div style="font-size:3rem;">🧸</div><p>Teddy Bear</p>
-        </div>
-        <div onclick="selectGift('ring')" class="gift-item" style="background:rgba(255,255,255,0.3); padding:15px; border-radius:20px; width:120px; cursor:pointer; border:3px solid transparent;">
-            <div style="font-size:3rem;">💍</div><p>Promise Ring</p>
+    <!-- SCREEN 3 (Hearts) -->
+    <div id="screen3" class="screen">
+        <span class="mission-badge">🎯 Task 2/8</span>
+        <h2>❤️‍🔥 Click all 5 hearts</h2>
+        <div id="hearts"></div>
+        <p id="heartCounter">❤️ 0/5</p>
+        <p style="font-weight:300;"> Take my hearts , which are meant for youuu❤️</p>
+    </div>
+
+    <!-- SCREEN 4 (Love is...) -->
+    <div id="screen4" class="screen">
+        <span class="mission-badge">🎯 Task 3/8</span>
+        <h2>✨ Love is ______</h2>
+        <input type="text" id="answer2" placeholder="your answer">
+        <button onclick="finalCheck()">📮 Submit</button>
+        <p style="font-weight:300;"> write what you feel about love ...</p>
+    </div>
+
+    <!-- SCREEN 5 (Date) -->
+    <div id="screen5" class="screen">
+        <span class="mission-badge">🎯 Task 4/8</span>
+        <h2>🌸 Which month did we had our first kiss ?</h2>
+        <input type="text" id="answerMonth" placeholder="Type the month...">
+        <button onclick="checkMonth()">💝 Submit</button>
+    </div>
+
+
+    <!-- SCREEN 6 (Love Meter) -->
+    <div id="screen6" class="screen">
+        <span class="mission-badge">🎯 Task 5/8</span>
+        <h2>📊 How much do you love me?</h2>
+        <input type="range" id="loveMeter" min="0" max="100" value="50" style="width:80%;">
+        <p id="loveValue">50%</p>
+        <button onclick="checkLoveMeter()">💘 Lock It!</button>
+    </div>
+
+    <!-- SCREEN 7 (Emoji) -->
+    <div id="screen7" class="screen">
+        <span class="mission-badge">🎯 Task 6/8</span>
+        <h2>🎮 Match the Emoji! 🎦😋🍴🍔</h2>
+        <div style="display:flex; flex-direction:column; gap:15px; max-width:300px; margin:0 auto;">
+            <button onclick="checkEmoji('date')"> Theatre date </button>
+            <button onclick="checkEmoji('pizza')">Dessert corner</button>
+            <button onclick="checkEmoji('movie')">Bus ride </button>
+            <button onclick="checkEmoji('cafe')">lunch date </button>
         </div>
     </div>
-    <p id="selectedGifts">✨ Selected: none</p>
-    <button onclick="submitGift()">🎀 Wrap Gift</button>
-</div>
 
-<!-- SCREEN 10 (Quiz) -->
-<div id="screen10" class="screen">
-    <span class="mission-badge">💘 Bonus Round</span>
-    <h2>📝 How well do you know me?</h2>
-    <div id="quizContainer">
-        <p id="quizQuestion"></p>
-        <div id="quizOptions"></div>
-    </div>
-    <p id="quizScore">❤️ Score: 0/5</p>
-</div>
+    <!-- SCREEN 8 (Song) -->
+    <div id="screen8" class="screen">
+        <span class="mission-badge">🎯 Task 7/8</span>
+        <h2>🎵 song you sang for me?</h2>
+        <p>"Sathame Illama En Mothathayum Sarichitta,
+            Soppanathil Vaithathai Thandhu, Saatchi Pottutta.
 
-<!-- SCREEN 11 (Final Proposal) -->
-<div id="screen11" class="screen">
-    <h1 id="proposalText">Jaanuuuu 💖, will you be my Valentine? 💘</h1>
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <button id="yes">Yes 💖</button>
-        <button id="no">No 😏</button>
+            Rasa, Ithu Enna Puthusa?
+            Vekkam Aache Sirusa,"</p>
+        <input type="text" id="songAnswer" placeholder="Next line?">
+        <button onclick="checkSong()">🎤 Sing it!</button>
+        <p>Type the next three words of it </p>
     </div>
-    <div id="photoSection"><img id="couplePhoto" src="photo.jpg" alt="Our Memory" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400'"></div>
-    <div id="letter">
-        <h2>💌 My Love Letter</h2>
-        <p>From the moment you entered my life, everything became brighter. You are my peace, my happiness, and my favorite person. Will you make this Valentine's unforgettable? ❤️</p>
-    </div>
-    <div id="memoryLane">
-        <h2>📸 Our Beautiful Journey 💕</h2>
-        <div class="gallery-row">
-            <div class="memory-card"><img src="memory1.jpg" onerror="this.src='https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=200&h=150&fit=crop'"><p>💕 First meet</p></div>
-            <div class="memory-card"><img src="memory2.jpg" onerror="this.src='https://images.unsplash.com/photo-1522673607200-164d1b3ce470?w=200&h=150&fit=crop'"><p>😍 That smile</p></div>
-            <div class="memory-card"><img src="memory3.jpg" onerror="this.src='https://images.unsplash.com/photo-1513207565459-d7f36bfa1222?w=200&h=150&fit=crop'"><p>🎂 Birthday fun</p></div>
+
+    <!-- SCREEN 9 (Gift) -->
+    <div id="screen9" class="screen">
+        <span class="mission-badge">🎯 Task 8/8</span>
+        <h2>🎁 Build Your Gift</h2>
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px;">
+            <div onclick="selectGift('chocolate')" class="gift-item"
+                style="background:rgba(255,255,255,0.3); padding:15px; border-radius:20px; width:120px; cursor:pointer; border:3px solid transparent;">
+                <div style="font-size:3rem;">🍫</div>
+                <p>Chocolates</p>
+            </div>
+            <div onclick="selectGift('flowers')" class="gift-item"
+                style="background:rgba(255,255,255,0.3); padding:15px; border-radius:20px; width:120px; cursor:pointer; border:3px solid transparent;">
+                <div style="font-size:3rem;">🌹</div>
+                <p>Flowers</p>
+            </div>
+            <div onclick="selectGift('teddy')" class="gift-item"
+                style="background:rgba(255,255,255,0.3); padding:15px; border-radius:20px; width:120px; cursor:pointer; border:3px solid transparent;">
+                <div style="font-size:3rem;">🧸</div>
+                <p>Teddy Bear</p>
+            </div>
+            <div onclick="selectGift('ring')" class="gift-item"
+                style="background:rgba(255,255,255,0.3); padding:15px; border-radius:20px; width:120px; cursor:pointer; border:3px solid transparent;">
+                <div style="font-size:3rem;">💍</div>
+                <p>Promise Ring</p>
+            </div>
         </div>
-        <div class="gallery-row">
-            <div class="memory-card"><img src="memory4.jpg" onerror="this.src='https://images.unsplash.com/photo-1507525425510-56c21e2a7fda?w=200&h=150&fit=crop'"><p>🌅 Adventure</p></div>
-            <div class="memory-card"><img src="memory5.jpg" onerror="this.src='https://images.unsplash.com/photo-1516589091380-5d8e9755f217?w=200&h=150&fit=crop'"><p>🤳 Cute selfie</p></div>
-        </div>
-        <p style="margin-top:25px;">✨ And many more to create... ✨</p>
+        <p id="selectedGifts">✨ Selected: none</p>
+        <button onclick="submitGift()">🎀 Wrap Gift</button>
     </div>
-</div>
 
-<!-- Audio and Toast -->
-<audio id="bgMusic" loop><source src="music.mp3" type="audio/mpeg"></audio>
-<div id="toastMessage">💕 Hmm... that's not my secret crush!</div>
+    <!-- SCREEN 10 (Quiz) -->
+    <div id="screen10" class="screen">
+        <span class="mission-badge">💘 last Bonus Round</span>
+        <h2>📝 How well do you know me?</h2>
+        <div id="quizContainer">
+            <p id="quizQuestion"></p>
+            <div id="quizOptions"></div>
+        </div>
+        <p id="quizScore">❤️ Score: 0/5</p>
+    </div>
 
-<script>
-(function() {
-    "use strict";
+    <!-- SCREEN 11 (Final Proposal) -->
+    <div id="screen11" class="screen">
+        <h1 id="proposalText">Jaanuuuu 💖, will you be my Valentine? 💘</h1>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <button id="yes">Yes 💖</button>
+            <button id="no">No 😏</button>
+        </div>
+        <div id="photoSection"><img id="couplePhoto" src="photo.jpg" alt="Our Memory"
+                onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400'"></div>
+        <div id="letter">
+            <h2>💌 Love Letter</h2>
+            <p>For long as am alive , you will always be loved from the bottom of my heart and my whole soul  , beacuse i have never
+                loved anyone or anything as deeply like you . You are sweet , you are kind , You are beautiful ,
+                and at the same time you are dump , because you don't know any of these but actually you are . 
+                I don't know what does the love sounds like in real life , but sometimes it sounds like "saaptiya" from you and love normally ends with 'e'
+                but whereas mine ends with you . I don't know everything , but i know you , you are my everything that i have been waiting so far .
+                This may sounds fictional , yeah i Know it is . Sometimes love is all about fiction , wanting something to be real for the rest of our life .
+                I hope it might happen . Happy Valentines My jaanu , endra aasa Bamblimassss 😘 💌.
+            </p>
+        </div>
+        <div id="memoryLane">
+            <h2>📸 Some of our journey 💕</h2>
+            <div class="gallery-row">
+                <div class="memory-card"><img src="memory1.jpg"
+                        onerror="this.src='https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=200&h=150&fit=crop'">
+                    <p>💕 Our first Photo </p>
+                </div>
+                <div class="memory-card"><img src="memory2.jpg"
+                        onerror="this.src='https://images.unsplash.com/photo-1522673607200-164d1b3ce470?w=200&h=150&fit=crop'">
+                    <p>😍 Your's first promise ever </p>
+                </div>
+                <div class="memory-card"><img src="memory3.jpg"
+                        onerror="this.src='https://images.unsplash.com/photo-1513207565459-d7f36bfa1222?w=200&h=150&fit=crop'">
+                    <p>🎂Day i felt worthy enough , and my legs were shiverred</p>
+                </div>
+            </div>
+            <div class="gallery-row">
+                <div class="memory-card"><img src="memory4.jpg"
+                        onerror="this.src='https://images.unsplash.com/photo-1507525425510-56c21e2a7fda?w=200&h=150&fit=crop'">
+                    <p>🌅 Official US 💌</p>
+                </div>
+                <div class="memory-card"><img src="memory5.jpg"
+                        onerror="this.src='https://images.unsplash.com/photo-1516589091380-5d8e9755f217?w=200&h=150&fit=crop'">
+                    <p>🤳 Favourite lens to be viewed through 😻</p>
+                </div>
+            </div>
+            <p style="margin-top:25px;">✨ Hopping to create many more , yoursss Dhaya 🫂 ✨</p>
+        </div>
+    </div>
 
-    // --- CONFIG ---
-    const SECRET_CRUSH = "jaanu";
-    const GIRL_NAME = "Jaanuuuu 💖";
-    const SPECIAL_DATE = "14/02/2023";
-    const OUR_SONG_KEYWORD = "see your face";
+    <!-- Audio and Toast -->
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <div id="toastMessage">💕 Hmm... that's not my secret crush!</div>
 
-    // --- GLOBALS ---
-    let selectedGiftsArray = [];
-    let quizScore = 0;
-    let currentQuiz = 0;
-    let noButtonRunning = true;  // No button is active until Yes clicked
+    <script>
+        (function () {
+            "use strict";
 
-    // --- QUIZ QUESTIONS (customize) ---
-    const quizQuestions = [
-        { question: "What's my favorite color?", options: ["Red", "Pink 💖", "Blue", "Black"], correct: 1 },
-        { question: "Where did we first meet?", options: ["College", "Park", "Beach", "Cafe"], correct: 0 },
-        { question: "What's my go-to coffee order?", options: ["Latte", "Cappuccino", "Espresso", "Frappe"], correct: 0 },
-        { question: "Which pet do I want?", options: ["Dog 🐕", "Cat 🐱", "Rabbit 🐰", "None"], correct: 0 },
-        { question: "What's our anniversary date?", options: ["14 Feb", "20 June", "10 March", "5 May"], correct: 0 }
-    ];
+            // --- CONFIG ---
+            const SECRET_CRUSH = "jaanu";
+            const GIRL_NAME = "Jaanuuuu 💖";
+            const SPECIAL_DATE = "14/02/2023";
+            const OUR_SONG_KEYWORD = "konjam pathu thodu";
 
-    // --- SCREEN NAVIGATION ---
-    window.nextScreen = function(num) {
-        document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
-        const next = document.getElementById("screen" + num);
-        if (next) next.classList.add("active");
-    };
+            // --- GLOBALS ---
+            let selectedGiftsArray = [];
+            let quizScore = 0;
+            let currentQuiz = 0;
+            let noButtonRunning = true;  // No button is active until Yes clicked
 
-    // --- TOAST ---
-    function showToast(msg, success = false) {
-        const toast = document.getElementById("toastMessage");
-        toast.innerHTML = (success ? "✅ " : "💕 ") + msg;
-        toast.style.opacity = "1";
-        toast.style.transform = "translateX(-50%) scale(1)";
-        toast.style.background = success ? "linear-gradient(145deg, #ff758c, #ff4d6d)" : "rgba(180,70,90,0.95)";
-        setTimeout(() => {
-            toast.style.opacity = "0";
-            toast.style.transform = "translateX(-50%) scale(0.9)";
-        }, 2500);
-    }
+            // --- QUIZ QUESTIONS (customize) ---
+            const quizQuestions = [
+                { question: "What's my age?", options: ["20", "21", "22", "19"], correct: 1 },
+                { question: "Where did I spoke to you in person first meet?", options: ["Lab", "1st yr class", "college", "Bus stand"], correct: 1 },
+                { question: "What's my favourite ice cream ?", options: ["Chocolate", "Vennila", "Black current", "Butterscotch"], correct: 3 },
+                { question: "Who made the first move ?", options: ["Dhaya", "Janaki Devi"], correct: 1 },
+                { question: "What's our love anniversary date?", options: ["14 Feb", "17 Apr", "10 March", "19 May"], correct: 1 }
+            ];
 
-    // --- TASK FUNCTIONS (simplified for space, add your full logic from previous) ---
-    window.checkAnswer = function() {
-        const ans = document.getElementById("answer1").value.trim().toLowerCase();
-        if (ans.includes(SECRET_CRUSH)) {
-            showToast("Correct! 💘", true);
-            setTimeout(() => { nextScreen(3); createHearts(); }, 1200);
-        } else {
-            showToast("Try again (hint: jaanu)", false);
-            document.getElementById("answer1").classList.add("shake");
-            setTimeout(() => document.getElementById("answer1").classList.remove("shake"), 500);
-        }
-    };
+            // --- SCREEN NAVIGATION ---
+            window.nextScreen = function (num) {
+                document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+                const next = document.getElementById("screen" + num);
+                if (next) next.classList.add("active");
+            };
 
-    function createHearts() { /* ... (keep your existing implementation) ... */ 
-        const container = document.getElementById("hearts");
-        const counter = document.getElementById("heartCounter");
-        container.innerHTML = "";
-        let count = 0;
-        counter.innerText = "❤️ 0/5 hearts collected";
-        for (let i=0; i<5; i++) {
-            const heart = document.createElement("span");
-            heart.innerHTML = "❤️";
-            heart.classList.add("heart");
-            heart.onclick = function() {
-                if (this.style.visibility !== "hidden") {
-                    this.style.visibility = "hidden";
-                    count++;
-                    counter.innerText = `❤️ ${count}/5 hearts collected`;
-                    if (count===5) setTimeout(()=>nextScreen(4),400);
+            // --- TOAST ---
+            function showToast(msg, success = false) {
+                const toast = document.getElementById("toastMessage");
+                toast.innerHTML = (success ? "✅ " : "💕 ") + msg;
+                toast.style.opacity = "1";
+                toast.style.transform = "translateX(-50%) scale(1)";
+                toast.style.background = success ? "linear-gradient(145deg, #ff758c, #ff4d6d)" : "rgba(180,70,90,0.95)";
+                setTimeout(() => {
+                    toast.style.opacity = "0";
+                    toast.style.transform = "translateX(-50%) scale(0.9)";
+                }, 2500);
+            }
+
+            // --- TASK FUNCTIONS (simplified for space, add your full logic from previous) ---
+            window.checkAnswer = function () {
+                const ans = document.getElementById("answer1").value.trim().toLowerCase();
+                if (ans.includes(SECRET_CRUSH)) {
+                    showToast("kandupudichitya , indha 💋💋😂", true);
+                    setTimeout(() => { nextScreen(3); createHearts(); }, 1200);
+                } else {
+                    showToast("Avalum pudikum , aana ipo ava ila🙈", false);
+                    document.getElementById("answer1").classList.add("shake");
+                    setTimeout(() => document.getElementById("answer1").classList.remove("shake"), 500);
                 }
             };
-            container.appendChild(heart);
+
+            function createHearts() { /* ... (keep your existing implementation) ... */
+                const container = document.getElementById("hearts");
+                const counter = document.getElementById("heartCounter");
+                container.innerHTML = "";
+                let count = 0;
+                counter.innerText = "❤️ 0/5 hearts collected";
+                for (let i = 0; i < 5; i++) {
+                    const heart = document.createElement("span");
+                    heart.innerHTML = "❤️";
+                    heart.classList.add("heart");
+                    heart.onclick = function () {
+                        if (this.style.visibility !== "hidden") {
+                            this.style.visibility = "hidden";
+                            count++;
+                            counter.innerText = `❤️ ${count}/5 hearts collected`;
+                            if (count === 5) setTimeout(() => nextScreen(4), 400);
+                        }
+                    };
+                    container.appendChild(heart);
+                }
+            }
+
+            window.finalCheck = function () {
+                if (document.getElementById("answer2").value.trim().length > 0) {
+                    showToast("Beautiful! 🥹", true); setTimeout(() => nextScreen(5), 1200);
+                } else showToast("Write something cute!", false);
+            };
+
+            window.checkMonth = function () {
+                const month = document.getElementById("answerMonth").value.trim().toLowerCase();
+
+                if (month === "may") {   // <-- change to your real month
+                    showToast("Yesss! You remembered thanagapulla 🥹💕", true);
+                    setTimeout(() => nextScreen(6), 1200);
+                } else {
+                    showToast("Hmmmm think again cutie 😏", false);
+                }
+            };
+
+            const meter = document.getElementById("loveMeter");
+            const val = document.getElementById("loveValue");
+            if (meter) meter.oninput = function () { val.innerHTML = this.value + "%"; };
+            window.checkLoveMeter = function () {
+                if (parseInt(meter.value) >= 100) { showToast("100%! Achooo avlo pudikumaaa 💞", true); setTimeout(() => nextScreen(7), 1200); }
+                else showToast(`Only ${meter.value}%? Enna d avlodhn unaku😡`, false);
+            };
+
+            window.checkEmoji = function (ans) {
+                if (ans === 'date') { showToast("Yesss! 🎬", true); setTimeout(() => nextScreen(8), 1200); }
+                else showToast("Nope! 😏", false);
+            };
+
+            window.checkSong = function () {
+                if (document.getElementById("songAnswer").value.trim().toLowerCase().includes(OUR_SONG_KEYWORD)) {
+                    showToast("Yes, it was perfect 🥹 You sang it so beautifully🎶", true); setTimeout(() => nextScreen(9), 1200);
+                } else showToast("Illa , vera try pannu😒", false);
+            };
+
+            window.selectGift = function (gift) {
+                const el = event.currentTarget;
+                if (selectedGiftsArray.includes(gift)) {
+                    selectedGiftsArray = selectedGiftsArray.filter(g => g !== gift);
+                    el.style.background = "rgba(255,255,255,0.3)";
+                    el.style.border = "3px solid transparent";
+                } else {
+                    selectedGiftsArray.push(gift);
+                    el.style.background = "rgba(255,200,200,0.5)";
+                    el.style.border = "3px solid white";
+                }
+                document.getElementById("selectedGifts").innerHTML = "✨ Selected: " + (selectedGiftsArray.length ? selectedGiftsArray.join(", ") : "none");
+            };
+            window.submitGift = function () {
+                if (selectedGiftsArray.length >= 2) {
+                    showToast("Beautiful gift! ,Here u have 🎁", true); setTimeout(() => { nextScreen(10); startQuiz(); }, 1500);
+                } else showToast("Choose at least 2 gifts!", false);
+            };
+
+            // --- QUIZ ---
+            window.startQuiz = function () { currentQuiz = 0; quizScore = 0; showQuizQuestion(); };
+            function showQuizQuestion() {
+                const q = quizQuestions[currentQuiz];
+                document.getElementById("quizQuestion").innerText = q.question;
+                let html = "";
+                q.options.forEach((opt, i) => { html += `<button onclick="answerQuiz(${i})" class="quiz-option" style="background:white; color:#b23b4b; padding:12px; border-radius:15px; border:none; margin:5px;">${opt}</button>`; });
+                document.getElementById("quizOptions").innerHTML = html;
+                document.getElementById("quizScore").innerText = `❤️ Score: ${quizScore}/${quizQuestions.length}`;
+            }
+            window.answerQuiz = function (idx) {
+                if (idx === quizQuestions[currentQuiz].correct) { quizScore++; showToast("Correct! 🎉", true); }
+                else showToast(`Oops! It's ${quizQuestions[currentQuiz].options[quizQuestions[currentQuiz].correct]}`, false);
+                currentQuiz++;
+                if (currentQuiz < quizQuestions.length) showQuizQuestion();
+                else {
+                    if (quizScore >= 3) {
+                        showToast(`You scored ${quizScore}/5! 💕`, true);
+                        setTimeout(() => { nextScreen(11); document.getElementById("proposalText").innerHTML = `${GIRL_NAME}, Will you be my Valentine? 💘`; startHearts(); }, 1500);
+                    } else { showToast("Let's try again! 😏", false); currentQuiz = 0; quizScore = 0; showQuizQuestion(); }
+                }
+            };
+
+            // --- FLOATING HEARTS ---
+            function startHearts() {
+                if (window.heartInterval) clearInterval(window.heartInterval);
+                window.heartInterval = setInterval(() => {
+                    const h = document.createElement("div");
+                    h.innerHTML = "❤️"; h.classList.add("floating");
+                    h.style.left = Math.random() * 100 + "%"; h.style.fontSize = (Math.random() * 30 + 18) + "px";
+                    h.style.animationDuration = (Math.random() * 4 + 5) + "s";
+                    document.body.appendChild(h);
+                    setTimeout(() => h.remove(), 8000);
+                }, 320);
+            }
+
+            // --- EVENT LISTENERS for No button runaway and clicks ---
+            document.addEventListener("mouseover", function (e) {
+                if (e.target.id === "no" && noButtonRunning) {
+                    const btn = e.target;
+                    const maxX = window.innerWidth - btn.offsetWidth - 30;
+                    const maxY = window.innerHeight - btn.offsetHeight - 30;
+                    btn.style.left = Math.min(Math.max(10, Math.random() * maxX), maxX) + "px";
+                    btn.style.top = Math.min(Math.max(10, Math.random() * maxY), maxY) + "px";
+                    btn.style.position = "fixed";
+                    btn.style.zIndex = "9999";
+                }
+            });
+
+            const yesBtn = document.getElementById("yes");
+            const noBtn = document.getElementById("no");
+
+            // YES click
+            yesBtn.addEventListener("click", function () {
+                const letter = document.getElementById("letter");
+                const photo = document.getElementById("couplePhoto");
+                const memory = document.getElementById("memoryLane");
+                const propText = document.getElementById("proposalText");
+
+                noButtonRunning = false;  // stop No from running
+
+                // Fade Yes quickly
+                yesBtn.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+                yesBtn.style.opacity = "0";
+                yesBtn.style.transform = "scale(0.8)";
+                yesBtn.style.pointerEvents = "none";
+
+                // Fade No slowly (1.5s) so it can still run while fading
+                noBtn.style.transition = "opacity 1.5s ease, transform 1.5s ease";
+                noBtn.style.opacity = "0";
+                noBtn.style.transform = "scale(0.8)";
+                noBtn.style.pointerEvents = "none";
+
+                setTimeout(() => { yesBtn.style.display = "none"; }, 400);
+                setTimeout(() => { noBtn.style.display = "none"; }, 1600); // after slow fade
+
+                setTimeout(() => {
+                    propText.innerHTML = "Yay! You said YES! 🥳💖💖";
+                    photo.style.display = "block";
+                    letter.style.display = "block";
+                    memory.style.display = "block";
+                    setTimeout(() => {
+                        photo.style.opacity = "1";
+                        letter.style.opacity = "1";
+                        memory.style.opacity = "1";
+                    }, 50);
+                    document.body.style.background = "linear-gradient(145deg, #d6406c, #ff8c9a)";
+                    showToast("Best decision ever! 💍", true);
+                }, 500);
+            });
+
+            // NO click (catch effect)
+            noBtn.addEventListener("click", function () {
+                if (!noButtonRunning) return;
+                showToast("Ha! You caught me! But I know you meant YES! 😘", false);
+                const originalText = "No 😏";
+                const originalBg = "#fff0f3";
+
+                noBtn.style.transition = "all 0.3s ease";
+                noBtn.style.transform = "scale(0.9)";
+                noBtn.style.background = "#ffb3c6";
+                noBtn.innerHTML = "Okay okay! 😅";
+
+                noButtonRunning = false;  // stop running temporarily
+
+                setTimeout(() => {
+                    noBtn.style.transform = "scale(1)";
+                    noBtn.style.background = originalBg;
+                    noBtn.innerHTML = originalText;
+                    noBtn.style.transition = "left 0.06s, top 0.06s, transform 0.3s, background 0.3s";
+                    noButtonRunning = true;  // resume running
+                }, 1000);
+            });
+
+            // --- RESET No on resize (prevents getting stuck off-screen) ---
+            window.addEventListener("resize", function () {
+                if (noBtn) {
+                    noBtn.style.position = "relative";
+                    noBtn.style.left = "auto";
+                    noBtn.style.top = "auto";
+                }
+            });
+
+            // --- MUSIC init ---
+            function initMusic() {
+                const music = document.getElementById("bgMusic");
+                if (music) {
+                    music.volume = 0.25;
+                    document.body.addEventListener("click", function starter() {
+                        music.play().catch(() => { });
+                        document.body.removeEventListener("click", starter);
+                    }, { once: true });
+                }
+            }
+            initMusic();
+
+            // --- Initial No position ---
+            if (noBtn) noBtn.style.position = "relative";
+        })();
+
+        // window.onload = function () {
+        //     nextScreen(11);
+        // };
+    </script>
+    <!-- Ensure memoryLane, letter, photo are hidden initially -->
+    <style>
+        #letter,
+        #couplePhoto,
+        #memoryLane {
+            display: none;
+            opacity: 0;
         }
-    }
 
-    window.finalCheck = function() {
-        if (document.getElementById("answer2").value.trim().length>0) {
-            showToast("Beautiful! 🥹", true); setTimeout(()=>nextScreen(5),1200);
-        } else showToast("Write something cute!", false);
-    };
-
-    window.checkDate = function() {
-        if (document.getElementById("answerDate").value.trim() === SPECIAL_DATE) {
-            showToast("You remembered! 🥹", true); setTimeout(()=>nextScreen(6),1200);
-        } else { showToast("Try again", false); document.getElementById("answerDate").classList.add("shake"); setTimeout(()=>document.getElementById("answerDate").classList.remove("shake"),500); }
-    };
-
-    const meter = document.getElementById("loveMeter");
-    const val = document.getElementById("loveValue");
-    if (meter) meter.oninput = function() { val.innerHTML = this.value+"%"; };
-    window.checkLoveMeter = function() {
-        if (parseInt(meter.value) >= 100) { showToast("100%! 💞",true); setTimeout(()=>nextScreen(7),1200); }
-        else showToast(`Only ${meter.value}%?`, false);
-    };
-
-    window.checkEmoji = function(ans) {
-        if (ans==='date'||ans==='movie') { showToast("Yesss! 🎬",true); setTimeout(()=>nextScreen(8),1200); }
-        else showToast("Nope! 😏", false);
-    };
-
-    window.checkSong = function() {
-        if (document.getElementById("songAnswer").value.trim().toLowerCase().includes(OUR_SONG_KEYWORD)) {
-            showToast("You know our song! 🎶",true); setTimeout(()=>nextScreen(9),1200);
-        } else showToast("Try again", false);
-    };
-
-    window.selectGift = function(gift) {
-        const el = event.currentTarget;
-        if (selectedGiftsArray.includes(gift)) {
-            selectedGiftsArray = selectedGiftsArray.filter(g => g!==gift);
-            el.style.background = "rgba(255,255,255,0.3)";
-            el.style.border = "3px solid transparent";
-        } else {
-            selectedGiftsArray.push(gift);
-            el.style.background = "rgba(255,200,200,0.5)";
-            el.style.border = "3px solid white";
+        #no {
+            position: relative;
         }
-        document.getElementById("selectedGifts").innerHTML = "✨ Selected: " + (selectedGiftsArray.length ? selectedGiftsArray.join(", ") : "none");
-    };
-    window.submitGift = function() {
-        if (selectedGiftsArray.length>=2) {
-            showToast("Beautiful gift! 🎁",true); setTimeout(()=>{ nextScreen(10); startQuiz(); },1500);
-        } else showToast("Choose at least 2 gifts!", false);
-    };
 
-    // --- QUIZ ---
-    window.startQuiz = function() { currentQuiz=0; quizScore=0; showQuizQuestion(); };
-    function showQuizQuestion() {
-        const q = quizQuestions[currentQuiz];
-        document.getElementById("quizQuestion").innerText = q.question;
-        let html = "";
-        q.options.forEach((opt,i) => { html += `<button onclick="answerQuiz(${i})" class="quiz-option" style="background:white; color:#b23b4b; padding:12px; border-radius:15px; border:none; margin:5px;">${opt}</button>`; });
-        document.getElementById("quizOptions").innerHTML = html;
-        document.getElementById("quizScore").innerText = `❤️ Score: ${quizScore}/${quizQuestions.length}`;
-    }
-    window.answerQuiz = function(idx) {
-        if (idx === quizQuestions[currentQuiz].correct) { quizScore++; showToast("Correct! 🎉",true); }
-        else showToast(`Oops! It's ${quizQuestions[currentQuiz].options[quizQuestions[currentQuiz].correct]}`, false);
-        currentQuiz++;
-        if (currentQuiz < quizQuestions.length) showQuizQuestion();
-        else {
-            if (quizScore >= 3) {
-                showToast(`You scored ${quizScore}/5! 💕`, true);
-                setTimeout(()=>{ nextScreen(11); document.getElementById("proposalText").innerHTML = `${GIRL_NAME}, you completed all tasks! Will you be my Valentine? 💘`; startHearts(); },1500);
-            } else { showToast("Let's try again! 😏", false); currentQuiz=0; quizScore=0; showQuizQuestion(); }
+        .gift-item {
+            transition: all 0.2s;
         }
-    };
-
-    // --- FLOATING HEARTS ---
-    function startHearts() {
-        if (window.heartInterval) clearInterval(window.heartInterval);
-        window.heartInterval = setInterval(() => {
-            const h = document.createElement("div");
-            h.innerHTML = "❤️"; h.classList.add("floating");
-            h.style.left = Math.random()*100+"%"; h.style.fontSize = (Math.random()*30+18)+"px";
-            h.style.animationDuration = (Math.random()*4+5)+"s";
-            document.body.appendChild(h);
-            setTimeout(()=>h.remove(), 8000);
-        }, 320);
-    }
-
-    // --- EVENT LISTENERS for No button runaway and clicks ---
-    document.addEventListener("mouseover", function(e) {
-        if (e.target.id === "no" && noButtonRunning) {
-            const btn = e.target;
-            const maxX = window.innerWidth - btn.offsetWidth - 30;
-            const maxY = window.innerHeight - btn.offsetHeight - 30;
-            btn.style.left = Math.min(Math.max(10, Math.random()*maxX), maxX) + "px";
-            btn.style.top = Math.min(Math.max(10, Math.random()*maxY), maxY) + "px";
-            btn.style.position = "fixed";
-            btn.style.zIndex = "9999";
-        }
-    });
-
-    const yesBtn = document.getElementById("yes");
-    const noBtn = document.getElementById("no");
-
-    // YES click
-    yesBtn.addEventListener("click", function() {
-        const letter = document.getElementById("letter");
-        const photo = document.getElementById("couplePhoto");
-        const memory = document.getElementById("memoryLane");
-        const propText = document.getElementById("proposalText");
-
-        noButtonRunning = false;  // stop No from running
-
-        // Fade Yes quickly
-        yesBtn.style.transition = "opacity 0.4s ease, transform 0.4s ease";
-        yesBtn.style.opacity = "0";
-        yesBtn.style.transform = "scale(0.8)";
-        yesBtn.style.pointerEvents = "none";
-
-        // Fade No slowly (1.5s) so it can still run while fading
-        noBtn.style.transition = "opacity 1.5s ease, transform 1.5s ease";
-        noBtn.style.opacity = "0";
-        noBtn.style.transform = "scale(0.8)";
-        noBtn.style.pointerEvents = "none";
-
-        setTimeout(() => { yesBtn.style.display = "none"; }, 400);
-        setTimeout(() => { noBtn.style.display = "none"; }, 1600); // after slow fade
-
-        setTimeout(() => {
-            propText.innerHTML = "Yay! You said YES! 🥳💖💖";
-            photo.style.display = "block";
-            letter.style.display = "block";
-            memory.style.display = "block";
-            setTimeout(() => {
-                photo.style.opacity = "1";
-                letter.style.opacity = "1";
-                memory.style.opacity = "1";
-            }, 50);
-            document.body.style.background = "linear-gradient(145deg, #d6406c, #ff8c9a)";
-            showToast("Best decision ever! 💍", true);
-        }, 500);
-    });
-
-    // NO click (catch effect)
-    noBtn.addEventListener("click", function() {
-        if (!noButtonRunning) return;
-        showToast("Ha! You caught me! But I know you meant YES! 😘", false);
-        const originalText = "No 😏";
-        const originalBg = "#fff0f3";
-
-        noBtn.style.transition = "all 0.3s ease";
-        noBtn.style.transform = "scale(0.9)";
-        noBtn.style.background = "#ffb3c6";
-        noBtn.innerHTML = "Okay okay! 😅";
-
-        noButtonRunning = false;  // stop running temporarily
-
-        setTimeout(() => {
-            noBtn.style.transform = "scale(1)";
-            noBtn.style.background = originalBg;
-            noBtn.innerHTML = originalText;
-            noBtn.style.transition = "left 0.06s, top 0.06s, transform 0.3s, background 0.3s";
-            noButtonRunning = true;  // resume running
-        }, 1000);
-    });
-
-    // --- RESET No on resize (prevents getting stuck off-screen) ---
-    window.addEventListener("resize", function() {
-        if (noBtn) {
-            noBtn.style.position = "relative";
-            noBtn.style.left = "auto";
-            noBtn.style.top = "auto";
-        }
-    });
-
-    // --- MUSIC init ---
-    function initMusic() {
-        const music = document.getElementById("bgMusic");
-        if (music) {
-            music.volume = 0.25;
-            document.body.addEventListener("click", function starter() {
-                music.play().catch(()=>{});
-                document.body.removeEventListener("click", starter);
-            }, { once: true });
-        }
-    }
-    initMusic();
-
-    // --- Initial No position ---
-    if (noBtn) noBtn.style.position = "relative";
-})();
-</script>
-<!-- Ensure memoryLane, letter, photo are hidden initially -->
-<style>
-    #letter, #couplePhoto, #memoryLane { display: none; opacity: 0; }
-    #no { position: relative; }
-    .gift-item { transition: all 0.2s; }
-</style>
+    </style>
 </body>
+
 </html>
